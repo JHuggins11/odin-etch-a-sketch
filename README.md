@@ -1,2 +1,2 @@
 # odin-etch-a-sketch
-Etch-a-Sketch application in JavaScript for The Odin Project's Foundations course. 
+A basic Etch-a-Sketch application in JavaScript for the JavaScript Fundamentals module in The Odin Project's Foundations course. 
