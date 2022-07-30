@@ -11,3 +11,7 @@
 .cell {
     border: 1px solid #000;
 }
+
+.cell.hover {
+    background-color: #ffff00;
+}
