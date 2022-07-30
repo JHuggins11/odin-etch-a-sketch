@@ -10,3 +10,12 @@ function createGrid() {
 }
 
 createGrid();
+
+const cells = document.querySelectorAll(".cell");
+
+// Assign "hover" class to cell divs when the mouse goes over them
+cells.forEach((cell) => {
+    cell.addEventListener("mouseover", () => {
+        cell.classList.add("hover");
+    })
+});
