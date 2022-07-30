@@ -1,6 +1,11 @@
 const header = document.querySelector("header");
 const gridContainer = document.querySelector(".grid-container");
 
+const btnNewGrid = document.createElement("button");
+btnNewGrid.textContent = "New Grid";
+const btnReset = document.createElement("button");
+btnReset.textContent = "Reset";
+
 // Create 16x16 rows
 function createGrid() {
     for (let i = 0; i < 256; i++) {
