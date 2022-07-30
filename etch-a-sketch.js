@@ -27,3 +27,10 @@ cells.forEach((cell) => {
         cell.classList.add("hover");
     })
 });
+
+// Reset colour of all cells when the reset button is clicked
+btnReset.addEventListener("click", () => {
+    cells.forEach((cell) => {
+        cell.classList.remove("hover");
+    })
+})
