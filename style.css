@@ -8,6 +8,6 @@
     grid-template-rows: repeat(16, 100px);
 }
 
-.row {
+.cell {
     border: 1px solid #000;
 }

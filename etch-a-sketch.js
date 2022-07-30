@@ -1,12 +1,12 @@
 const container = document.querySelector(".grid-container");
 
 // Create 16x16 rows
-function createRows() {
+function createGrid() {
     for (let i = 0; i < 256; i++) {
-        const row = document.createElement("div");
-        row.className = "row";
-        container.appendChild(row);
+        const cell = document.createElement("div");
+        cell.className = "cell";
+        container.appendChild(cell);
     }
 }
 
-createRows();
+createGrid();
