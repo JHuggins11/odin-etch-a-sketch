@@ -1,3 +1,4 @@
+const header = document.querySelector("header");
 const gridContainer = document.querySelector(".grid-container");
 
 // Create 16x16 rows
