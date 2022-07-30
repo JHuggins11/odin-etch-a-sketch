@@ -5,6 +5,8 @@ const btnNewGrid = document.createElement("button");
 btnNewGrid.textContent = "New Grid";
 const btnReset = document.createElement("button");
 btnReset.textContent = "Reset";
+header.appendChild(btnNewGrid);
+header.appendChild(btnReset);
 
 // Create 16x16 rows
 function createGrid() {
