@@ -15,3 +15,5 @@ function createGrid() {
         container.appendChild(row);
     }
 }
+
+createGrid();
