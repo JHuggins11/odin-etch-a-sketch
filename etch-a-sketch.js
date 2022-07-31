@@ -15,17 +15,17 @@ function promptUser() {
     let newSqPerSide;
     
     while (!isValidInput) {
-        // Rounds down if a float value is inputted
-        newSqPerSide = Math.floor(prompt("Enter an integer for the number of squares per side in the new grid."));
+        newSqPerSide = parseInt(prompt("Enter an integer for the number of squares per side in the new grid."));
+        console.log(newSqPerSide);
 
-        if (newSqPerSide > 100) {
+        if (isNaN(newSqPerSide)) {
+            alert("Error: The inputted value must be a number.");
+        }
+        else if (newSqPerSide > 100) {
             alert("Error: The inputted value is too high. The maximum allowed value is 100.");
         }
         else if (newSqPerSide <= 0) {
             alert("Error: The inputted value cannot be negative or equal to 0.");
-        }
-        else if (typeof(newSqPerSide) !== Number) {
-            alert("Error: The inputted value must be a number.");
         }
         else {
             isValidInput = true;
@@ -75,5 +75,7 @@ function addHoverEventListeners() {
     });
 }
 
-// Call for default 16x16 grid
+btnNewGrid.addEventListener("click", promptUser);
+
+// Default to 16x16 grid on entry
 createGrid(16);
