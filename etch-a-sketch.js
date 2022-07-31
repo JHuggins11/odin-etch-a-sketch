@@ -6,8 +6,10 @@ const btnNewGrid = document.createElement("button");
 btnNewGrid.textContent = "New Grid";
 const btnReset = document.createElement("button");
 btnReset.textContent = "Reset";
+const currentGridSize = document.createElement("p");
 header.appendChild(btnNewGrid);
 header.appendChild(btnReset);
+header.appendChild(currentGridSize)
 
 // Prompt user to enter the number of squares per side to create a grid
 function promptUser() {
@@ -47,6 +49,7 @@ function createGrid(sqPerSide) {
     }
 
     gridContainer.setAttribute("style", `grid-template-columns: repeat(${sqPerSide}, 1fr); grid-template-rows: repeat(${sqPerSide}, 1fr)`);
+    currentGridSize.textContent = `Current grid size: ${sqPerSide}x${sqPerSide}`;
     addHoverEventListeners();
 }
 
