@@ -18,7 +18,6 @@ function promptUser() {
     
     while (!isValidInput) {
         newSqPerSide = parseInt(prompt("Enter an integer for the number of squares per side in the new grid."));
-        console.log(newSqPerSide);
 
         if (isNaN(newSqPerSide)) {
             alert("Error: The inputted value must be a number.");
