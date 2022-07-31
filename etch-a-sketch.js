@@ -11,6 +11,7 @@ header.appendChild(btnReset);
 
 // Create grid based on a given number of squares per side (e.g. inputting 16 would generate a 16x16 grid)
 function createGrid(sqPerSide) {
+    removeGrid();
     const sqTotal = sqPerSide * sqPerSide;
 
     for (let i = 0; i < sqTotal; i++) {
