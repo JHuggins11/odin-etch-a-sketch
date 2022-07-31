@@ -9,6 +9,32 @@ btnReset.textContent = "Reset";
 header.appendChild(btnNewGrid);
 header.appendChild(btnReset);
 
+// Prompt user to enter the number of squares per side to create a grid
+function promptUser() {
+    let isValidInput = false;
+    let newSqPerSide;
+    
+    while (!isValidInput) {
+        // Rounds down if a float value is inputted
+        newSqPerSide = Math.floor(prompt("Enter an integer for the number of squares per side in the new grid."));
+
+        if (newSqPerSide > 100) {
+            alert("Error: The inputted value is too high. The maximum allowed value is 100.");
+        }
+        else if (newSqPerSide <= 0) {
+            alert("Error: The inputted value cannot be negative or equal to 0.");
+        }
+        else if (typeof(newSqPerSide) !== Number) {
+            alert("Error: The inputted value must be a number.");
+        }
+        else {
+            isValidInput = true;
+        }
+    }
+
+    createGrid(newSqPerSide);
+}
+
 // Create grid based on a given number of squares per side (e.g. inputting 16 would generate a 16x16 grid)
 function createGrid(sqPerSide) {
     removeGrid();
