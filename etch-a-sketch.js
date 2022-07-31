@@ -8,16 +8,18 @@ btnReset.textContent = "Reset";
 header.appendChild(btnNewGrid);
 header.appendChild(btnReset);
 
-// Create 16x16 rows
-function createGrid() {
-    for (let i = 0; i < 256; i++) {
+// Create grid based on a given number of squares per side (e.g. inputting 16 would generate a 16x16 grid)
+function createGrid(sqPerSide) {
+    const sqTotal = sqPerSide * sqPerSide;
+
+    for (let i = 0; i < sqTotal; i++) {
         const cell = document.createElement("div");
         cell.className = "cell";
         gridContainer.appendChild(cell);
     }
-}
 
-createGrid();
+    gridContainer.setAttribute("style", `grid-template-columns: repeat(${sqPerSide}, 1fr); grid-template-rows: repeat(${sqPerSide}, 1fr)`);
+}
 
 const cells = document.querySelectorAll(".cell");
 
@@ -34,3 +36,6 @@ btnReset.addEventListener("click", () => {
         cell.classList.remove("hover");
     })
 })
+
+// Call for default 16x16 grid
+createGrid(16);
